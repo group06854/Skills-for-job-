@@ -1,6 +1,3 @@
-Here's a complete block of code that you can paste right into `README.md `. It is formatted in Markdown and contains everything you need.:
-
-````markdown
 # 📊 HH.ru Vacancies in an Analytical Dashboard
 
 **Project structure:**
@@ -62,4 +59,3 @@ docker-compose down
 # 3. Open in browser
 http://localhost
 ```
-````
