@@ -1,8 +1,7 @@
 # 📊 HH.ru Vacancies in an Analytical Dashboard
+I chose these requirements as the key ones for myself, because the main parameter that is necessary for employment is skills, then whether you need work experience, since it is often noticed, and then what kind of working day, because it gives you an understanding of whether you can allocate so much time to work or not.
 
 **Project structure:**
-I chose these signs as the key ones for myself, because the main parameter that is necessary for employment is skills, then whether you need work experience, since it is often noticed, and then what kind of working day, because it gives you an understanding of whether you can allocate so much time to work or not.
-
 ```
 BONUS/
 ├── frontend/               # Frontend UI
