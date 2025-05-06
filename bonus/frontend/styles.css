@@ -38,3 +38,19 @@ h1 {
     color: #444;
     text-align: center;
 }
+
+#expChart {
+    display: block;
+    box-sizing: border-box;
+    width: 50% !important;
+    height: 410px !important;
+    margin: 0 auto;
+}
+
+#schedChart {
+    display: block;
+    box-sizing: border-box;
+    width: 50% !important;
+    height: 410px !important;
+    margin: 0 auto;
+}
