@@ -14,6 +14,8 @@
                 <h3>Top Skills</h3>
                 <canvas id="skillsChart"></canvas>
             </div>
+        </div>
+        <div class="charts-container">
             <div class="chart-wrapper">
                 <h3>Work Experience</h3>
                 <canvas id="expChart"></canvas>
@@ -39,15 +41,20 @@ async function loadData() {
 }
 
 function renderCharts(stats) {
+    const sortedSkills = Object.entries(stats.skills)
+        .sort((a, b) => b[1] - a[1]);
+
+    const skillLabels = sortedSkills.map(entry => entry[0]);
+    const skillValues = sortedSkills.map(entry => entry[1]);
     new Chart(
         document.getElementById('skillsChart'),
         {
             type: 'bar',
             data: {
-                labels: Object.keys(stats.skills),
+                labels: skillLabels,
                 datasets: [{
                     label: 'Skills',
-                    data: Object.values(stats.skills),
+                    data: skillValues,
                     backgroundColor: '#4B8BBE'
                 }]
             },
@@ -70,7 +77,11 @@ function renderCharts(stats) {
                         '#4B8BBE', '#306998', '#FFD43B', '#646464'
                     ]
                 }]
-            }
+            },
+            options: {
+    responsive: true,
+    maintainAspectRatio: false
+}
         }
     );
     
@@ -83,11 +94,18 @@ function renderCharts(stats) {
                 datasets: [{
                     label: 'Schedule',
                     data: Object.values(stats.schedule),
-                    backgroundColor: '#306998'
+                    backgroundColor: '#306998',
+                    barThickness: 60
                 }]
-            }
+            },
+            options: {
+                responsive: true,
+                
+                maintainAspectRatio: false
         }
-    );
+        
+    });
+    
 }
 
 document.addEventListener('DOMContentLoaded', loadData);
